@@ -51,6 +51,63 @@
         </div>
     </footer>
 
+    <!-- ===== MODALE DE PAIEMENT ===== -->
+<div class="modal-overlay" id="paymentModal">
+  <div class="modal-content">
+    <h2>Paiement sécurisé</h2>
+    <form id="paymentForm">
+      <div class="form-group">
+        <label for="fullname">Nom complet</label>
+        <input type="text" id="fullname" name="fullname" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Adresse e-mail</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Adresse de livraison</label>
+        <textarea id="address" name="address" rows="3" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Méthode de paiement</label>
+        <div class="payment-methods">
+          <label><input type="radio" name="paymentMethod" value="card" checked> Carte Bancaire</label>
+          <label><input type="radio" name="paymentMethod" value="mobile"> Mobile Money (Orange / Airtel / Telma)</label>
+          <label><input type="radio" name="paymentMethod" value="paypal"> PayPal</label>
+        </div>
+      </div>
+
+      <div id="cardDetails">
+        <div class="form-group">
+          <label for="cardnumber">Numéro de carte</label>
+          <input type="text" id="cardnumber" name="cardnumber" placeholder="XXXX XXXX XXXX XXXX">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="expiry">Expiration</label>
+            <input type="text" id="expiry" name="expiry" placeholder="MM/AA">
+          </div>
+
+          <div class="form-group">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" name="cvv" placeholder="123">
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-buttons">
+        <button type="submit" class="checkout-button">Payer maintenant</button>
+        <button type="button" class="cancel-button" id="closeModalBtn">Annuler</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
     <script src="script.js"></script>
 </body>
 </html>

@@ -188,21 +188,6 @@ function showNotification(message) {
     }, 2500);
 }
 
-/**
- * Traite le paiement
- */
-function processCheckout() {
-    if (cart.length === 0) {
-        alert('Votre panier est vide. Ajoutez des produits avant de procéder au paiement.');
-    } else {
-        alert('Merci pour votre commande ! Dans une version réelle, vous seriez redirigé vers une page de paiement.');
-        // Vider le panier après la commande
-        cart = [];
-        localStorage.setItem('cart', JSON.stringify(cart));
-        renderCart();
-        updateCartCounter();
-    }
-}
 
 /**
  * Met à jour l'affichage du panier
@@ -591,7 +576,7 @@ function createProductCard(product) {
     // Créer le prix
     const price = document.createElement('span');
     price.className = 'price';
-    price.textContent = `${product.price.toFixed(0)}Ar / ${product.unit}`;
+    price.textContent = `${product.price.toFixed(0)} MGA / ${product.unit}`;
     
     // Créer le bouton d'ajout au panier
     const addButton = document.createElement('button');
@@ -759,3 +744,38 @@ function updateNoResultsMessage(productGrid, productCards) {
         noResultsMessage.remove();
     }
 }
+
+
+// Ouvre la modale
+document.querySelector('.checkout-button').addEventListener('click', () => {
+  document.getElementById('paymentModal').style.display = 'flex';
+});
+
+// Ferme la modale
+document.getElementById('closeModalBtn').addEventListener('click', () => {
+  document.getElementById('paymentModal').style.display = 'none';
+});
+
+// Affiche ou cache les champs carte selon la méthode
+document.querySelectorAll('input[name="paymentMethod"]').forEach(input => {
+  input.addEventListener('change', () => {
+    const cardSection = document.getElementById('cardDetails');
+    cardSection.style.display = input.value === 'card' ? 'block' : 'none';
+  });
+});
+
+// Soumission du formulaire
+document.getElementById('paymentForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  // Simuler un paiement
+  alert("Paiement effectué avec succès ! Merci pour votre achat.");
+
+  // Vider le panier
+  cart = [];
+  localStorage.setItem("cart", JSON.stringify(cart));
+  updateCartAndUI();
+
+  // Fermer la modale
+  document.getElementById('paymentModal').style.display = 'none';
+});
