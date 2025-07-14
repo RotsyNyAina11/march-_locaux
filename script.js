@@ -140,7 +140,7 @@ function addToCart(button) {
     const productImage = productCard.querySelector('img').src;
     const priceElement = productCard.querySelector('.price');
     const productPriceText = priceElement ? priceElement.textContent : '0';
-    const priceMatch = productPriceText.match(/(\d+\.?\d*)/); // Trouve un nombre avec ou sans décimales
+    const priceMatch = productPriceText.match(/(\d+\.?\d*)/); 
     const productPrice = priceMatch ? parseFloat(priceMatch[1]) : 0;
     const productUnit = productPriceText.includes('/') ? productPriceText.split('/ ')[1] : 'unité';
     
@@ -230,7 +230,7 @@ function renderCart() {
             <a href="products.html" class="btn">Parcourir les produits</a>
         `;
         cartItemsContainer.appendChild(emptyCartMessage);
-        cartTotalElement.textContent = '0.00€';
+        cartTotalElement.textContent = '0.00MGA';
         return;
     }
     
@@ -247,17 +247,8 @@ function renderCart() {
     });
     
     // Mettre à jour le total affiché
-    cartTotalElement.textContent = `${total.toFixed(2)}€`;
-    
-    // Ajouter un bouton pour passer la commande
-    const checkoutBtn = document.createElement('button');
-    checkoutBtn.className = 'checkout-btn';
-    checkoutBtn.textContent = 'Passer la commande';
-    checkoutBtn.addEventListener('click', function() {
-        alert('Merci pour votre commande ! Cette fonctionnalité sera bientôt disponible.');
-    });
-    
-    cartItemsContainer.appendChild(checkoutBtn);
+    cartTotalElement.textContent = `${total.toFixed(1)}MGA`;
+
 }
 
 /**
@@ -282,14 +273,14 @@ function createCartItemElement(item, index) {
     
     const itemPrice = document.createElement('p');
     itemPrice.className = 'item-price';
-    itemPrice.textContent = `${item.price.toFixed(2)}€ / ${item.unit}`;
+    itemPrice.textContent = `${item.price.toFixed(1)}MGA/ ${item.unit}`;
     
     const quantityControls = createQuantityControls(index);
     
     const itemTotal = document.createElement('p');
     itemTotal.className = 'item-total';
     const itemTotalPrice = item.price * item.quantity;
-    itemTotal.textContent = `Total: ${itemTotalPrice.toFixed(2)}€`;
+    itemTotal.textContent = `Total: ${itemTotalPrice.toFixed(1)}MGA`;
     
     const removeBtn = document.createElement('button');
     removeBtn.className = 'remove-item';

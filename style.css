@@ -330,11 +330,56 @@ button:hover {
 }
 
 /* ===== Catégories ===== */
-.categories {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+/* ===== Catégories dynamiques ===== */
+#categories {
+    margin-top: 3rem;
 }
+
+.categories,
+.hidden-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/* Par défaut, on cache les catégories supplémentaires */
+.hidden-categories {
+    display: none;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Animation douce d’apparition */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Bouton "Voir plus" */
+#showMoreCategoriesBtn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 1.5rem;
+}
+
+#showMoreCategoriesBtn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
 
 .category-card {
     background-color: white;
@@ -639,6 +684,7 @@ footer {
     border-radius: 4px;
 }
 
+
 .item-details {
     flex: 1;
 }
@@ -646,23 +692,45 @@ footer {
 .quantity-controls {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
-    margin: 0.5rem 0;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    padding: 5px 10px;
+    margin-top: 0.5rem;
+    width: fit-content;
 }
 
 .quantity-controls button {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
+    background-color: #e9ecef;
     border: none;
-    background: #f8f9fa;
     border-radius: 50%;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .quantity-controls button:hover {
-    background: #e9ecef;
+    background-color: #28a745;
+    color: white;
+    transform: scale(1.1);
 }
+
+.quantity-controls span {
+    min-width: 24px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #212529;
+}
+
 
 .remove-item {
     margin-top: 0.5rem;
@@ -685,6 +753,48 @@ footer {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+/* Icône panier */
+.cart-link {
+    position: relative;
+    display: inline-block;
+    color: white;
+}
+
+.cart-icon {
+    width: 24px;
+    height: 24px;
+    stroke: white;
+    transition: transform 0.3s ease;
+}
+
+.cart-link:hover .cart-icon {
+    transform: scale(1.1);
+}
+
+/* Compteur du panier */
+.cart-counter {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #e67e22;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 999px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    min-width: 18px;
+    text-align: center;
+}
+
+
+/* Rendre le lien du panier positionné pour afficher le badge */
+nav a[href="cart.html"] {
+    position: relative;
+}
+
 
 .checkout-button {
     width: 100%;
