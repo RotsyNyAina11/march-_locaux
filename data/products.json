@@ -1,0 +1,172 @@
+{
+  "categories": [
+    {
+      "id": "fruits-legumes",
+      "name": "Fruits & Légumes",
+      "description": "Fraîchement cueillis dans nos régions.",
+      "image": "../images/fruits légumes.jpeg"
+    },
+    {
+      "id": "produits-laitiers",
+      "name": "Produits Laitiers",
+      "description": "Fromages, yaourts et plus, issus de nos élevages locaux.",
+      "image": "../images/laitier.jpg"
+    },
+    {
+      "id": "viandes-volailles",
+      "name": "Viandes & Volailles",
+      "description": "Élevées traditionnellement dans nos villages.",
+      "image": "../images/cancer-viande-rouge-vollaille.jpg"
+    },
+    {
+      "id": "boulangerie",
+      "name": "Boulangerie",
+      "description": "Pains et pâtisseries artisanales malgaches.",
+      "image": "../images/boulangerie.jpg"
+    },
+    {
+      "id": "epicerie",
+      "name": "Épicerie Fine",
+      "description": "Produits d'épicerie locaux et de qualité.",
+      "image": "../images/epicerie.jpeg"
+    },
+    {
+      "id": "boissons",
+      "name": "Boissons",
+      "description": "Jus, bières et vins locaux.",
+      "image": "../images/boisson.webp"
+    }
+  ],
+  "products": [
+    {
+      "id": "mangue-kensington",
+      "name": "Mangue Kensington",
+      "category": "fruits-legumes",
+      "price": 2000,
+      "unit": "kg",
+      "description": "Mangues savoureuses cultivées à Mahajanga, idéales fraîches ou en jus.",
+      "image": "../images/produits/mangue_kensington.jpeg",
+      "origin": "Mahajanga",
+      "distance": 580,
+      "badges": ["local"],
+      "featured": true
+    },
+    {
+      "id": "riz-bembe",
+      "name": "Riz Bémabe",
+      "category": "epicerie",
+      "price": 3500,
+      "unit": "kg",
+      "description": "Riz traditionnel de la région de Toliara, cultivé sans produits chimiques.",
+      "image": "../images/produits/riz.jpg",
+      "origin": "Toliara",
+      "distance": 900,
+      "badges": ["bio", "local"],
+      "featured": true
+    },
+    {
+      "id": "vanille-bourbon",
+      "name": "Vanille Bourbon",
+      "category": "epicerie",
+      "price": 15000,
+      "unit": "50g",
+      "description": "Vanille de qualité supérieure récoltée dans le nord-est de Madagascar.",
+      "image": "../images/produits/vanille.jpeg",
+      "origin": "Sambava",
+      "distance": 1100,
+      "badges": ["artisanal", "bio", "export"],
+      "featured": true
+    },
+    {
+      "id": "pain-mozambique",
+      "name": "Pain Mozambique",
+      "category": "boulangerie",
+      "price": 1500,
+      "unit": "pièce",
+      "description": "Pain traditionnel moelleux, cuit au feu de bois dans les quartiers d’Antananarivo.",
+      "image": "../images/produits/pain.jpg",
+      "origin": "Antananarivo",
+      "distance": 0,
+      "badges": ["artisanal", "local"],
+      "featured": false
+    },
+    {
+      "id": "poulet-de-case",
+      "name": "Poulet de Case",
+      "category": "viandes-volailles",
+      "price": 8000,
+      "unit": "kg",
+      "description": "Poulet élevé librement dans les campagnes autour de Fianarantsoa.",
+      "image": "../images/produits/poulet_case.jpeg",
+      "origin": "Fianarantsoa",
+      "distance": 400,
+      "badges": ["local"],
+      "featured": false
+    },
+    {
+      "id": "jus-mangue",
+      "name": "Jus de Mangue Naturel",
+      "category": "boissons",
+      "price": 4500,
+      "unit": "bouteille",
+      "description": "Jus pressé à froid sans sucre ajouté, produit à partir de mangues locales.",
+      "image": "../images/produits/jus_mague.jpg",
+      "origin": "Toamasina",
+      "distance": 700,
+      "badges": ["bio", "artisanal"],
+      "featured": false
+    },
+    {
+      "id": "fromage-vacoas",
+      "name": "Fromage Vacoas",
+      "category": "produits-laitiers",
+      "price": 6000,
+      "unit": "pièce",
+      "description": "Fromage artisanal fabriqué à base de lait local à Antsirabe.",
+      "image": "../images/produits/fromage.jpg",
+      "origin": "Antsirabe",
+      "distance": 170,
+      "badges": ["artisanal", "local"],
+      "featured": false
+    },
+    {
+      "id": "coco-gratin",
+      "name": "Coco Gratiné",
+      "category": "fruits-legumes",
+      "price": 1200,
+      "unit": "pièce",
+      "description": "Noix de coco mature, coupée en lamelles et légèrement grillée.",
+      "image": "../images/produits/gratin_coco.jpg",
+      "origin": "Farafangana",
+      "distance": 600,
+      "badges": ["artisanal", "local"],
+      "featured": false
+    },
+    {
+      "id": "ravitoto-poulet",
+      "name": "Ravitoto au Poulet",
+      "category": "epicerie",
+      "price": 10000,
+      "unit": "plat",
+      "description": "Plat traditionnel malgache à base de feuilles de manioc pilées et de poulet fermier.",
+      "image": "../images/produits/ravitoto.jpg",
+      "origin": "Antananarivo",
+      "distance": 0,
+      "badges": ["traditionnel", "local"],
+      "featured": false
+    },
+    {
+      "id": "koba-arachide",
+      "name": "Koba aux Arachides",
+      "category": "boulangerie",
+      "price": 2500,
+      "unit": "pièce",
+      "description": "Pâtisserie traditionnelle à base de farine de riz, miel et arachides grillées. Faite maison.",
+      "image": "../images/produits/Recette-Koba.jpg",
+      "origin": "Antananarivo",
+      "distance": 0,
+      "badges": ["artisanal", "local"],
+      "featured": false
+    }
+  ]
+}

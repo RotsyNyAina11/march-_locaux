@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Produits - Produits Locaux</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Nos Produits Locaux</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="products.html">Produits</a></li>
+                    <li><a href="index.html">À propos</a></li>
+                    <li><a href="index.html">Contact</a></li>
+                    <li><a href="cart.html">Panier</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="all-products">
+                <h2>Tous nos produits</h2>
+                
+                <div class="product-filters">
+                <div class="search-bar">
+                    <input type="text" id="product-search" placeholder="Rechercher un produit...">
+                </div>
+                
+                <div class="filter-options">
+                    <div class="filter-group">
+                        <label for="category-filter">Catégorie:</label>
+                        <select id="category-filter">
+                            <option value="all">Toutes les catégories</option>
+                            <option value="fruits-legumes">Fruits & Légumes</option>
+                            <option value="produits-laitiers">Produits Laitiers</option>
+                            <option value="viandes-volailles">Viandes & Volailles</option>
+                            <option value="boulangerie">Boulangerie</option>
+                            <option value="epicerie">Épicerie Fine</option>
+                            <option value="boissons">Boissons</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="sort-by">Trier par:</label>
+                        <select id="sort-by">
+                            <option value="default">Par défaut</option>
+                            <option value="price-asc">Prix croissant</option>
+                            <option value="price-desc">Prix décroissant</option>
+                            <option value="name-asc">Nom (A-Z)</option>
+                            <option value="name-desc">Nom (Z-A)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Les produits seront ajoutés ici -->
+                <div class="product-card" data-category="fruits-legumes" data-price="3.50" data-name="Pommes Bio">
+                    <div class="product-badges">
+                        <span class="badge bio">Bio</span>
+                        <span class="badge local">Local</span>
+                    </div>
+                    <img src="images/pommes.jpg" alt="Pommes locales">
+                    <h3>Pommes Bio</h3>
+                    <p>Délicieuses pommes cultivées localement, certifiées bio. Variété Gala, croquantes et juteuses, idéales pour une collation saine.</p>
+                    <div class="product-details">
+                        <span class="origin">Origine: Vergers de Saint-Martin</span>
+                        <span class="distance">À 15km</span>
+                    </div>
+                    <span class="price">3.50 Ar/ kg</span>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+                <div class="product-card" data-category="produits-laitiers" data-price="8.00" data-name="Fromage de Chèvre Fermier">
+                    <div class="product-badges">
+                        <span class="badge artisanal">Artisanal</span>
+                        <span class="badge local">Local</span>
+                    </div>
+                    <img src="images/fromage.jpg" alt="Fromage de chèvre">
+                    <h3>Fromage de Chèvre Fermier</h3>
+                    <p>Fromage artisanal au lait cru de chèvre. Affiné pendant 3 semaines pour un goût authentique et une texture crémeuse.</p>
+                    <div class="product-details">
+                        <span class="origin">Origine: Ferme des Collines</span>
+                        <span class="distance">À 8km</span>
+                    </div>
+                    <span class="price">8.00€ / pièce</span>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+                <div class="product-card" data-category="epicerie" data-price="12.00" data-name="Miel de Fleurs Sauvages">
+                    <div class="product-badges">
+                        <span class="badge bio">Bio</span>
+                        <span class="badge local">Local</span>
+                    </div>
+                    <img src="images/miel.jpg" alt="Miel de fleurs">
+                    <h3>Miel de Fleurs Sauvages</h3>
+                    <p>Miel pur récolté dans les prairies locales. Saveur délicate et parfumée, récolté et mis en pot à la main par nos apiculteurs.</p>
+                    <div class="product-details">
+                        <span class="origin">Origine: Rucher du Vallon</span>
+                        <span class="distance">À 12km</span>
+                    </div>
+                    <span class="price">12.00€ / pot</span>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+                <div class="product-card" data-category="boulangerie" data-price="4.50" data-name="Pain au Levain Artisanal">
+                    <div class="product-badges">
+                        <span class="badge artisanal">Artisanal</span>
+                    </div>
+                    <img src="images/pain.jpg" alt="Pain au levain">
+                    <h3>Pain au Levain Artisanal</h3>
+                    <p>Pain cuit au four à bois, avec une croûte croustillante. Préparé avec une farine locale et un levain naturel cultivé depuis plus de 10 ans.</p>
+                    <div class="product-details">
+                        <span class="origin">Origine: Boulangerie du Moulin</span>
+                        <span class="distance">À 5km</span>
+                    </div>
+                    <span class="price">4.50€ / pièce</span>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Marché des Producteurs Locaux. Tous droits réservés.</p>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>

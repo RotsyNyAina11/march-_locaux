@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marché des Producteurs Locaux</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Bienvenue sur le Marché des Producteurs Locaux</h1>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Accueil</a></li>
+                    <li><a href="products.html">Produits</a></li>
+                    <li><a href="#categories">Catégories</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="cart.html">Panier</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="hero">
+                <h2>Découvrez le meilleur de notre région</h2>
+                <p>Soutenez les producteurs locaux et savourez des produits frais et authentiques.</p>
+                <div class="view-all-products">
+                <a href="products.html" class="button">Voir nos produits</a>
+                </div>
+            </section>
+
+        <section id="categories">
+            <h2>Nos Catégories</h2>
+            <div class="categories">
+                <div class="category-card">
+                </div>
+            </div>
+            <div class="hidden-categories">
+                <div class="category-card">
+                </div>
+            </div>
+            <div class="show-more-categories">
+                <button id="showMoreCategoriesBtn">Voir plus de catégories</button>
+            </div>
+        </section>
+
+        <section id="featured-products">
+            <h2>Nos produits phares</h2>
+            <div class="product-grid">
+                <div class="product-card" data-category="fruits-legumes" data-price="3.50" data-name="Pommes Bio">
+                    <div class="product-badges">
+                        <span class="badge bio">Bio</span>
+                        <span class="badge local">Local</span>
+                    </div>
+                        <img src="images/pommes.jpg" alt="Pommes Bio">
+                    <h3>Pommes Bio</h3>
+                    <p>Fruits frais cultivés en agriculture biologique.</p>
+                    <div class="product-details">
+                        <span class="origin">Origine: France</span>
+                        <span class="distance">À 20km</span>
+                    </div>
+                    <span class="price">3.50€ / kg</span>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+                <div class="product-card" data-category="produits-laitiers" data-price="8.00" data-name="Fromage de Chèvre Fermier">
+                    <div class="product-badges">
+                    </div>
+                        <img src="images/pommes.jpg" alt="Pommes Bio">
+                    <h3>Pommes Bio</h3>
+                    <p>Fruits frais cultivés en agriculture biologique.</p>
+                    <div class="product-details">
+                        <span class="origin">Origine: France</span>
+                        <span class="distance">À 20km</span>
+                    </div>
+                    <span class="price">3.50€ / kg</span>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+                <div class="product-card" data-category="produits-laitiers" data-price="8.00" data-name="Fromage de Chèvre Fermier">
+                    <div class="product-badges">
+                    </div>
+                    <img src="images/pommes.jpg" alt="Pommes Bio">
+                    <h3>Pommes Bio</h3>
+                    <p>Fruits frais cultivés en agriculture biologique.</p>
+                    <div class="product-details">
+                        <span class="origin">Origine: France</span> 
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="view-all-products">
+                <a href="products.html" class="button">Voir tous les produits</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>À propos de nous</h2>
+            <p>Nous sommes dédiés à vous apporter les meilleurs produits locaux, directement de nos fermes et artisans.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contactez-nous</h2>
+            <p>Pour toute question, n'hésitez pas à nous contacter à caa4@gmail.com.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Marché des Producteurs Locaux CAA4. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

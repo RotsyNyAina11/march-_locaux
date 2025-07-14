@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votre Panier - Marché des Producteurs Locaux</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Effectuer vos Achats</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html#hero">Accueil</a></li>
+                    <li><a href="products.html">Produits</a></li>
+                    <li><a href="index.html#categories">Catégories</a></li>
+                    <li><a href="index.html#about">À propos</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="cart.html">Panier</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="cart" class="container">
+            <h2>Votre Panier</h2>
+            <div class="cart-items">
+                <!-- Les articles du panier seront ajoutés ici par JavaScript -->
+                <p>Votre panier est vide pour le moment.</p>
+            </div>
+
+            <div class="cart-summary">
+                <h3>Total: <span id="cart-total">0.00€</span></h3>
+                <button class="checkout-button">Procéder au paiement</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Marché des Producteurs Locaux. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
