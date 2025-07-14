@@ -105,13 +105,33 @@
 
         <section id="about">
             <h2>À propos de nous</h2>
-            <p>Nous sommes dédiés à vous apporter les meilleurs produits locaux, directement de nos fermes et artisans.</p>
+            <p>Notre mission est de soutenir les producteurs locaux en vous proposant des produits frais, sains et artisanaux, directement issus de notre terroir. Grâce à notre plateforme, vous consommez mieux tout en valorisant l’économie locale.</p>
+            <p>Que ce soit des fruits, des légumes, des produits transformés ou des créations artisanales, nous mettons tout en œuvre pour vous garantir qualité, transparence et proximité.</p>
         </section>
 
-        <section id="contact">
-            <h2>Contactez-nous</h2>
-            <p>Pour toute question, n'hésitez pas à nous contacter à caa4@gmail.com.</p>
-        </section>
+    <section id="contact" class="container">
+    <h2>Contactez-nous</h2>
+    <p style="margin-bottom: 1.5rem;">Vous avez une question ou une suggestion ? Remplissez le formulaire ci-dessous ou envoyez-nous un email à <a href="mailto:caa4@gmail.com" style="color: #28a745; text-decoration: underline;">caa4@gmail.com</a>.</p>
+
+    <form class="contact-form" action="#" method="POST">
+        <div class="form-group">
+        <label for="name">Nom complet</label>
+        <input type="text" id="name" name="name" placeholder="Votre nom" required />
+        </div>
+        <div class="form-group">
+        <label for="email">Adresse email</label>
+        <input type="email" id="email" name="email" placeholder="Votre email" required />
+        </div>
+        <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+        </div>
+        <div class="form-group" style="text-align: center;">
+        <button type="submit" class="button">Envoyer le message</button>
+        </div>
+    </form>
+    </section>
+
 
     </main>
 
